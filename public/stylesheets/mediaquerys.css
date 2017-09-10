@@ -102,12 +102,12 @@
   .purchase-now a {
     margin-top: 20px;
   }
-  .portfolio-item {
+  /*.portfolio-item {
     max-width: 360px;
     width: 80%;
     text-align: center;
     margin: 0 10%;
-  }
+  }*/
   .available-on {
     text-align: center;
   }
@@ -126,10 +126,10 @@
 }
 
 @media only screen and (max-width: 990px ) {
-  .portfolio-item {
+  /*.portfolio-item {
     max-width: 360px;
     width: 80%;
     text-align: center;
     margin: 0 25%;
-  }
+  }*/
 }

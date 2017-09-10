@@ -99,7 +99,9 @@ icon {
   background-color: transparent;
   color: #129CF3;
 }
-
+.navbar-brand {
+  margin-top: 3.5%;
+}
 
 /* Header Section */
 
