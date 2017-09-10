@@ -102,6 +102,9 @@
   .purchase-now a {
     margin-top: 20px;
   }
+  .btn-purchase-now {
+    width: 92.5%
+  }
   /*.portfolio-item {
     max-width: 360px;
     width: 80%;
@@ -119,6 +122,15 @@
     left: 80px;
     float: inherit;
     margin-right: 20px;
+  }
+  .contact-form button {
+    margin: 0 auto;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .btn-download {
+    width: 100%;
+    margin: 0 auto;
   }
   footer {
     text-align: center;
