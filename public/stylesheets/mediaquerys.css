@@ -132,6 +132,12 @@
     width: 100%;
     margin: 0 auto;
   }
+
+  .sign-in,
+  .log-in {
+    text-align: center;
+  }
+
   footer {
     text-align: center;
   }

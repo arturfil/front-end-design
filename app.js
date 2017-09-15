@@ -5,7 +5,13 @@ const logger       = require('morgan');
 const cookieParser = require('cookie-parser');
 const bodyParser   = require('body-parser');
 const layouts      = require('express-ejs-layouts');
+const mongoose     = require('mongoose');
+const session      = require('express-session');
+const passport     = require('passport');
+const flash        = require('connect-flash');
 
+require('./config/passport-config.js');
+mongoose.connect('mongodb://localhost/express-users');
 
 const app = express();
 
@@ -24,9 +30,31 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(layouts);
+app.use(session(
+  {
+    secret: 'this string needs to be different for every app',
+    resave: true,
+    saveUninitialized: true
+  }
+));
+app.use(passport.initialize());
+app.use(passport.session());
+app.use(flash());
+
+app.use((req, res, next) => {
+  if(req.user) {
+    res.locals.currentUser = req.user;
+  } else {
+    res.locals.currentUser = null;
+  }
+  next();
+})
 
 const index = require('./routes/index');
 app.use('/', index);
+
+const myAuthRoutes = require('./routes/auth-router.js');
+app.use(myAuthRoutes);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
