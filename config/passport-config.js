@@ -60,8 +60,8 @@ const FbStrategy = require('passport-facebook').Strategy;
 passport.use(
   new FbStrategy(
     {
-      clientID: facebook_app_id,
-      clientSecret: facebook_app_secret,
+      clientID: process.env.fb_app_id,
+      clientSecret: process.env.fb_app_secret,
       callbackURL: '/auth/facebook/callback'
     },
     (accesToken, refreshToken, profile, done) => {
@@ -104,8 +104,8 @@ const GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
 passport.use(
   new GoogleStrategy(
     {
-      clientID: google_client_id,
-      clientSecret: google_client_secret
+      clientID: process.env.google_client_id,
+      clientSecret: process.env.google_client_secret,
       callbackURL: '/auth/google/callback',
       proxy: true
     },
