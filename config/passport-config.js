@@ -60,8 +60,8 @@ const FbStrategy = require('passport-facebook').Strategy;
 passport.use(
   new FbStrategy(
     {
-      clientID: '2388836791341792',
-      clientSecret: 'b59c3452d10765e1d3116b42faef8af1',
+      clientID: facebook_app_id,
+      clientSecret: facebook_app_secret,
       callbackURL: '/auth/facebook/callback'
     },
     (accesToken, refreshToken, profile, done) => {
@@ -104,8 +104,8 @@ const GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
 passport.use(
   new GoogleStrategy(
     {
-      clientID: '1045573402738-1qbi14qsb1l9a6sl2d2rg7kms6ovg5ai.apps.googleusercontent.com',
-      clientSecret: 'RLj09K0fVVbExZYIjJHzcdLh',
+      clientID: google_client_id,
+      clientSecret: google_client_secret
       callbackURL: '/auth/google/callback',
       proxy: true
     },
@@ -125,7 +125,7 @@ passport.use(
           }
           const theUser = new UserModel({
             googleID: profile.id,
-            email: profile.email[0].value
+            email: profile.emails[0].value
           });
           theUser.save((err) => {
             if(err){

@@ -10,8 +10,10 @@ const session      = require('express-session');
 const passport     = require('passport');
 const flash        = require('connect-flash');
 
+require('dotenv').config();
+
 require('./config/passport-config.js');
-mongoose.connect('mongodb://localhost/express-users');
+mongoose.connect(process.env.MONGODB_URI);
 
 const app = express();
 
@@ -55,6 +57,9 @@ app.use('/', index);
 
 const myAuthRoutes = require('./routes/auth-router.js');
 app.use(myAuthRoutes);
+
+const mySpotRoutes = require('./routes/spots-router.js');
+app.use(mySpotRoutes);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {

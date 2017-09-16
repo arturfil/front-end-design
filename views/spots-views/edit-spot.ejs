@@ -1,0 +1,43 @@
+
+  <div class="sign-in spot-form">
+    <h2 class="form-login"> Edit Spot </h2>
+
+    <form class="form-login" action="/spots/<%= spotsInfo._id %>" method="post">
+      <label for="name-input">Name</label>
+      <br>
+      <input id="name-input"type="text" name="nameValue" value="<%= spotsInfo.name %>">
+      <br>
+
+      <label for="workout-input">Workout Type</label>
+      <br>
+      <select id="workout" name="workoutValue">
+        <option value="Cardio">Cardio</option>
+        <option value="Resistance">Resistance</option>
+        <option value="Cardio & Resistance">Cardio & Resistance</option>
+      </select>
+      <br>
+
+      <label for="location-input">Location</label>
+      <br>
+      <input id="location-input"type="text" name="locationValue" value="<%= spotsInfo.location %>">
+      <br>
+
+      <label for="rating-input">Rating</label>
+      <br>
+      <input id="rating-input"type="text" name="ratingValue" value="<%= spotsInfo.rating %>">
+      <br>
+
+      <p>Displaying Image: </p>
+      <img src="<%= spotsInfo.image %>" alt="">
+      <label for="image-input">Image</label>
+      <br>
+      <input id="image-input"type="img" name="imageValue">
+      <br>
+
+
+      <br>
+      <button>Save Changes</button>
+      <br>
+      <br>
+    </form>
+  </div>

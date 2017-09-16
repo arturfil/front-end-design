@@ -1,0 +1,31 @@
+<div class="text">
+  <h2>Spots In Miami</h2>
+  <a href="/spots/new">Add a New Spot</a>
+</div>
+
+
+<div class="container list-of-posts">
+  <div class="row">
+
+
+      <ul>
+        <% listOfSpots.forEach((oneSpot) => { %>
+          <div class="all-spots col-md-3">
+          <li>
+            <img src="<%= oneSpot.image %>" alt="">
+            <h3> <%= oneSpot.name %> </h3>
+            <p> Work Out Type:
+              <br>
+              <%= oneSpot.workout %> </p>
+            <p> <%= oneSpot.rating %> </p>
+            <p> <%= oneSpot.location %> </p>
+            <a href="/spots/<%= oneSpot._id%>">More</a>
+            <br>
+            <!-- <a href="/spots/<%= oneSpot._id%>/edit">Edit</a> -->
+          </li>
+          </div>
+      <% }) %>
+      </ul>
+
+  </div>
+</div>
