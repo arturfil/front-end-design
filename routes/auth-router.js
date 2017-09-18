@@ -71,7 +71,7 @@ router.get('/login', (req, res, next) => {
 
 router.post('/process-login',
   passport.authenticate('local', {
-    successRedirect: '/',
+    successRedirect: '/spots',
     failureRedirect: '/login',
     failureFlash: true
   })
@@ -88,7 +88,7 @@ router.get('/auth/facebook', passport.authenticate('facebook'));
 
 router.get('/auth/facebook/callback',
   passport.authenticate('facebook', {
-    successRedirect: '/',
+    successRedirect: '/spots',
     failureRedirect: '/login',
     failureFlash: true
   })
@@ -105,7 +105,7 @@ router.get('/auth/google',
 
 router.get('/auth/google/callback',
   passport.authenticate('google', {
-    successRedirect: '/',
+    successRedirect: '/spots',
     failureRedirect: '/login',
     failureFlash: true
   })

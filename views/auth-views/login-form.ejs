@@ -1,17 +1,27 @@
 
   <div class="log-in sign-in">
-    <h2 class="form-login"> Log In </h2>
-
     <form class="form-login" action="/process-login" method="post">
-      <label for="email-input" >email</label>
-      <br>
-      <input id="email-input" type="text" name="loginEmail" value="">
-      <br>
+      <h2 class="form-login-header"> Log In </h2>
 
-      <label for="password-input" >password</label>
-      <br>
-      <input id="password-input" type="password" name="loginPassword">
-      <br>
+      <div class="group">
+        <input id="email-input" type="text" name="loginEmail" value="">
+        <label for="email-input" >email</label>
+
+        <span class="highlight"></span>
+        <span class="bar"></span>
+
+        <br>
+      </div>
+
+      <div class="group">
+        <input id="password-input" type="password" name="loginPassword">
+        <span class="highlight"></span>
+        <label for="password-input" >password</label>
+
+        <span class="bar"></span>
+        <br>
+      </div>
+
       <br>
       <button>Log In</button>
       <br>
@@ -22,3 +32,21 @@
       <a class="btn btn-default" id="google" href="/auth/google">Log In With Google <i class='fa fa-google'></i></a>
     </form>
   </div>
+
+  <!-- <form>
+
+      <div class="group">
+        <input type="text" required>
+        <span class="highlight"></span>
+        <span class="bar"></span>
+        <label>Name</label>
+      </div>
+
+      <div class="group">
+        <input type="text" required>
+        <span class="highlight"></span>
+        <span class="bar"></span>
+        <label>Email</label>
+      </div>
+
+    </form> -->

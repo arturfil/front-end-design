@@ -2,6 +2,16 @@ const express   = require('express');
 const SpotModel = require('../models/spot-model.js');
 const router    = express.Router();
 
+// custom middleware for views => login / sign up and / logout
+router.use((req, res, next) => {
+  if(req.user) {
+    res.locals.currentUser = req.user;
+  } else {
+    res.locals.currentUser = null;
+  }
+  next();
+})
+
 router.get('/spots', (req, res, next) => {
   SpotModel.find((err, allSpots) => {
     if(err) {
@@ -71,7 +81,7 @@ router.get('/spots/:spotsId/edit', (req, res, next) => {
 router.post('/spots/:spotsId', (req, res, next) => {
   SpotModel.findById(
     req.params.spotsId,
-    (err, spostsFromDb) => {
+    (err, spotsFromDb) => {
       if(err) {
         next(err);
         return;
@@ -93,13 +103,13 @@ router.post('/spots/:spotsId', (req, res, next) => {
 });
 
 router.post('/spots/:spotsId/delete', (req, res, next) => {
-  SpotModel.findAndRemove(
-    req.params.spostId,
+  SpotModel.findByIdAndRemove(
+    req.params.spotsId,
     (err, spotsInfo) => {
       if(err) {
         next(err);
         return;
-      }
+      };
       res.redirect('/spots');
     }
   )

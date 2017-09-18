@@ -123,6 +123,9 @@ icon {
 .logo {
   padding-bottom: 50px;
 }
+.header-text {
+  margin-top: 280px;
+}
 .header-text h1 {
   color: #fff;
   font-size: 35px;
@@ -130,16 +133,19 @@ icon {
   line-height: 45px;
   padding-top: 30px;
   text-transform: uppercase;
+  text-align: center;
 }
 .header-text p {
   color: #fff;
   font-size: 17px;
   line-height: 28px;
   font-weight: 300;
+  text-align: center;
 }
 .header-btns {
   margin-top: 90px;
   margin-bottom: 50px;
+  text-align: center;
 }
 .btn-download,
 .btn-download:focus
@@ -605,12 +611,21 @@ icon {
 
 .form-login {
   text-align: center;
+  background-color: #fff;
+  margin-top: 80px;
+  width: 500px;
+  margin: 0 auto;
+  border-radius: 15px;
 }
-
-.form-login {
-  padding-top: 80px;
+.form-login-header {
+  margin-top: 20px;
+  background-color: #fff;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px 0;
+  width: 500px;
+  border-radius: 15px;
 }
-
 .form-login input {
   width: 400px;
   height: 32px;
@@ -639,18 +654,16 @@ icon {
   height: 32px;
   color: white;
   border: transparent;
+  margin-bottom: 20px;
 }
-
 .text {
   text-align: center;
   margin-top: 80px;
 }
-
 .list-of-posts {
   min-height: 560px;
   width: 1400px;
 }
-
 .all-spots {
   background-color: #fafafa;
   /*border-radius: 5px;*/
@@ -659,39 +672,162 @@ icon {
   width: 24%;
   text-align: center;
   list-style-type: none;
-  min-height: 380px;
-  max-height: 380px;
-
+  min-height: 410px;
+  max-height: 410px;
 }
-
 .all-spots img {
   width: 100%;
   padding: 20px 0;
   min-height: 200px;
   max-height: 200px;
 }
-
 .sign-in {
-  margin-top: -20px;
+  padding-top: 150px;
   background-image: url("../images/board-walk.jpg");
+  /*background-color: #03C4EB;*/
   background-repeat: no-repeat;
   background-attachment: fixed;
   -moz-background-size: cover;
   -o-background-size: cover;
   -webkit-background-size: cover;
   background-position: 50% 50%;
-  height: 860px;
+  height: 690px;
 }
-
 .form-login select {
   width: 400px;
   height: 32px;
   background-color: #fff;
   border-radius: none;
+  border: 1px solid #eee;
+}
+.spot-details {
+  /*height: 580px;*/
+  margin: 120px auto 30px auto;
+  text-align: center;
+}
+.spot-details img {
+  height: 500px;
+  width: 750px;
+}
+.edit-button {
+  width: 50%;
+  height: 32px;
+  background-color: #129CF3;
+  color: white;
+  border: transparent;
+}
+.delete-button {
+  margin-top: 2px;
+  width: 50%;
+  height: 32px;
+  background-color: orangered;
+  color: white;
+  border: transparent;
 }
 
-.spot-details {
-  height: 580px;
-  margin: 120px auto 0 auto;
-  text-align: center;
+.spots-button {
+  margin-top: 30px;
+  background: transparent;
+  border-color: #129CF3;
+  padding: 10px 30px;
+  font-size: 19px;
+  text-transform: uppercase;
+  border-radius: 3px;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -o-transition: all 1s;
+}
+
+/* Google Esque form */
+
+.group 			  {
+  position:relative;
+}
+input 				{
+  font-size:18px;
+  padding:10px 10px 10px 5px;
+  display:block;
+  width:300px;
+  border:none;
+  border-bottom:1px solid #757575;
+}
+input:focus 		{ outline:none; }
+
+/* LABEL ======================================= */
+label 				 {
+  color:#999;
+  font-size:18px;
+  font-weight:normal;
+  position:absolute;
+  pointer-events:none;
+  left:50px;
+  top:10px;
+  transition:0.2s ease all;
+  -moz-transition:0.2s ease all;
+  -webkit-transition:0.2s ease all;
+}
+
+/* active state */
+input:focus ~ label, input:valid ~ label 		{
+  top:-20px;
+  font-size:14px;
+  color:#129CF3;
+}
+
+/* BOTTOM BARS ================================= */
+.bar 	{ position:relative; display:block; width:450px; }
+.bar:before, .bar:after 	{
+  content:'';
+  height:4px;
+  width:0;
+  left: 50px;
+  bottom:1px;
+  position:absolute;
+  background:#129CF3;
+  transition:0.2s ease all;
+  -moz-transition:0.2s ease all;
+  -webkit-transition:0.2s ease all;
+}
+.bar:before {
+  left:50%;
+}
+.bar:after {
+  right:50%;
+}
+
+/* active state */
+input:focus ~ .bar:before, input:focus ~ .bar:after {
+  width:50%;
+}
+
+/* HIGHLIGHTER ================================== */
+.highlight {
+  position:absolute;
+  height:60%;
+  width:100px;
+  top:25%;
+  left:0;
+  pointer-events:none;
+  opacity:0.5;
+}
+
+/* active state */
+input:focus ~ .highlight {
+  -webkit-animation:inputHighlighter 0.3s ease;
+  -moz-animation:inputHighlighter 0.3s ease;
+  animation:inputHighlighter 0.3s ease;
+}
+
+/* ANIMATIONS ================ */
+@-webkit-keyframes inputHighlighter {
+	from { background:#129CF3; }
+  to 	{ width:0; background:transparent; }
+}
+@-moz-keyframes inputHighlighter {
+	from { background:#129CF3; }
+  to 	{ width:0; background:transparent; }
+}
+@keyframes inputHighlighter {
+	from { background:#129CF3; }
+  to 	{ width:0; background:transparent; }
 }

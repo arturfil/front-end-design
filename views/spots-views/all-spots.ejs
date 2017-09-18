@@ -1,6 +1,6 @@
 <div class="text">
   <h2>Spots In Miami</h2>
-  <a href="/spots/new">Add a New Spot</a>
+  <a href="/spots/new" class=" btn btn-default spots-button">Add a New Spot</a>
 </div>
 
 
@@ -10,7 +10,7 @@
 
       <ul>
         <% listOfSpots.forEach((oneSpot) => { %>
-          <div class="all-spots col-md-3">
+          <div class="all-spots col-md-3 col-sm-6">
           <li>
             <img src="<%= oneSpot.image %>" alt="">
             <h3> <%= oneSpot.name %> </h3>
@@ -19,9 +19,11 @@
               <%= oneSpot.workout %> </p>
             <p> <%= oneSpot.rating %> </p>
             <p> <%= oneSpot.location %> </p>
-            <a href="/spots/<%= oneSpot._id%>">More</a>
-            <br>
+              <a class="edit-button btn btn-default"href="/spots/<%= oneSpot._id%>">More</a>
             <!-- <a href="/spots/<%= oneSpot._id%>/edit">Edit</a> -->
+            <form class="delete-form" action="/spots/<%= oneSpot._id%>/delete" method="post">
+              <button class="btn btn-default delete-button"> Delete </button>
+            </form>
           </li>
           </div>
       <% }) %>

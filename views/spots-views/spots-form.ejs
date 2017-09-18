@@ -1,37 +1,51 @@
 
   <div class="sign-in spot-form">
-    <h2 class="form-login"> Enter a New Spot </h2>
 
     <form class="form-login" action="/spots" method="post">
-      <label for="name-input">Name</label>
-      <br>
-      <input id="name-input"type="text" name="nameValue" value="">
-      <br>
+      <h2 class="form-login-header"> Enter a New Spot </h2>
 
-      <label for="workout-input">Workout Type</label>
+      <div class="group">
+        <input id="name-input"type="text" name="nameValue" value="">
+        <label for="name-input">Name</label>
+        <span class="highlight"></span>
+        <span class="bar"></span>
+      </div>
+
       <br>
+      <br>
+      <label for="workout-input">Workout Type</label>
       <select id="workout" name="workoutValue">
         <option value="Cardio">Cardio</option>
         <option value="Resistance">Resistance</option>
         <option value="Cardio & Resistance">Cardio & Resistance</option>
       </select>
       <br>
-
-      <label for="location-input">Location</label>
       <br>
-      <input id="location-input"type="text" name="locationValue">
       <br>
 
-      <label for="rating-input">Rating</label>
+      <div class="group">
+        <input id="location-input"type="text" name="locationValue">
+        <label for="location-input">Location</label>
+        <span class="highlight"></span>
+        <span class="bar"></span>
+      </div>
+
       <br>
-      <input id="rating-input"type="type" name="ratingValue">
+      <div class="group">
+        <input id="rating-input"type="type" name="ratingValue">
+        <label for="rating-input">Rating</label>
+        <span class="highlight"></span>
+        <span class="bar"></span>
+      </div>
       <br>
 
-      <label for="image-input">Image</label>
+      <div class="group">
+        <input id="image-input"type="img" name="imageValue">
+        <label for="image-input">Image</label>
+        <span class="highlight"></span>
+        <span class="bar"></span>
+      </div>
       <br>
-      <input id="image-input"type="img" name="imageValue">
-      <br>
-
 
       <br>
       <button>Submit</button>

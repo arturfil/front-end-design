@@ -10,13 +10,15 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-12">
           <div class="header-text">
             <h1> Find The Perfect Spot</h1>
             <p> Discovering New Expiriences </p>
           </div>
           <div class="header-btns">
-            <a href="/login" class="btn wow fadeInLeft btn-download"> LOG IN </a>
+        <%  if(!currentUser) { %>
+              <a href="/login" class="btn wow fadeInLeft btn-download"   > LOG IN </a>
+        <%  }  %>
             <a href="#ABOUT" class="btn wow fadeInRight btn-tour">
               Take a tour
               <i class="fa fa-angle-down"></i>

@@ -43,6 +43,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use(flash());
 
+// custom middleware for views => login / sign up and / logout
 app.use((req, res, next) => {
   if(req.user) {
     res.locals.currentUser = req.user;
@@ -51,6 +52,8 @@ app.use((req, res, next) => {
   }
   next();
 })
+
+
 
 const index = require('./routes/index');
 app.use('/', index);
