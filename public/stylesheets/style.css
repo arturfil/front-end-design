@@ -611,20 +611,20 @@ icon {
 
 .form-login {
   text-align: center;
-  background-color: #fff;
+  /*background-color: #fff;*/
   margin-top: 80px;
   width: 450px;
   margin: 0 auto;
-  border-radius: 15px;
+  /*border-radius: 15px;*/
 }
 .form-login-header {
   margin-top: 20px;
-  background-color: #fff;
+  /*background-color: #fff;*/
   margin: 0 auto;
   text-align: center;
   padding: 20px 0;
   width: 450px;
-  border-radius: 15px;
+  /*border-radius: 15px;*/
 }
 .form-login input {
   width: 400px;
