@@ -740,7 +740,7 @@ icon {
 
 /* Google Esque form */
 
-.group 			  {
+/*.group 			  {
   position:relative;
 }
 input 				{
@@ -754,7 +754,7 @@ input 				{
 input:focus 		{ outline:none; }
 
 /* LABEL ======================================= */
-label 				 {
+/*label 				 {
   color:#999;
   font-size:18px;
   font-weight:normal;
@@ -765,17 +765,17 @@ label 				 {
   transition:0.2s ease all;
   -moz-transition:0.2s ease all;
   -webkit-transition:0.2s ease all;
-}
+}*/
 
 /* active state */
-input:focus ~ label, input:valid ~ label 		{
+/*input:focus ~ label, input:valid ~ label 		{
   top:-20px;
   font-size:14px;
   color:#129CF3;
-}
+}*/
 
 /* BOTTOM BARS ================================= */
-.bar 	{ position:relative; display:block; width:450px; }
+/*.bar 	{ position:relative; display:block; width:450px; }
 .bar:before, .bar:after 	{
   content:'';
   height:4px;
@@ -796,12 +796,12 @@ input:focus ~ label, input:valid ~ label 		{
 }
 
 /* active state */
-input:focus ~ .bar:before, input:focus ~ .bar:after {
+/*input:focus ~ .bar:before, input:focus ~ .bar:after {
   width:50%;
-}
+}*/
 
 /* HIGHLIGHTER ================================== */
-.highlight {
+/*.highlight {
   position:absolute;
   height:60%;
   width:100px;
@@ -809,17 +809,17 @@ input:focus ~ .bar:before, input:focus ~ .bar:after {
   left:0;
   pointer-events:none;
   opacity:0.5;
-}
+}*/
 
-/* active state */
-input:focus ~ .highlight {
+ /*active state */
+/*input:focus ~ .highlight {
   -webkit-animation:inputHighlighter 0.3s ease;
   -moz-animation:inputHighlighter 0.3s ease;
   animation:inputHighlighter 0.3s ease;
-}
+}*/
 
 /* ANIMATIONS ================ */
-@-webkit-keyframes inputHighlighter {
+/*@-webkit-keyframes inputHighlighter {
 	from { background:#129CF3; }
   to 	{ width:0; background:transparent; }
 }
@@ -830,4 +830,4 @@ input:focus ~ .highlight {
 @keyframes inputHighlighter {
 	from { background:#129CF3; }
   to 	{ width:0; background:transparent; }
-}
+}*/*/
