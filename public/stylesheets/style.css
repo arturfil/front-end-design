@@ -106,15 +106,15 @@ icon {
 /* Header Section */
 
 .header{
+  margin-top: -20px;
   background-image: url("../images/calisthenics-park.jpg");
-  background-attachment: fixed;
   background-repeat: no-repeat;
+  background-attachment: fixed;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
   background-position: 50% 50%;
-  max-height: 800px;
-  background-size: 100% 100%;
-  -moz-background-size:cover;
-  -o-background-size:cover;
-  -webkit-background-size:cover;
+  height: 860px;
 }
 .header-overlay {
   background-color: rgba(31, 31, 31, 0.7);
