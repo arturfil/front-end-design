@@ -106,15 +106,15 @@ icon {
 /* Header Section */
 
 .header{
-  margin-top: -20px;
   background-image: url("../images/calisthenics-park.jpg");
-  background-repeat: no-repeat;
   background-attachment: fixed;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  -webkit-background-size: cover;
+  background-repeat: no-repeat;
   background-position: 50% 50%;
-  height: 860px;
+  max-height: 800px;
+  background-size: cover;
+  -moz-background-size:cover;
+  -o-background-size:cover;
+  -webkit-background-size:cover;
 }
 .header-overlay {
   background-color: rgba(31, 31, 31, 0.7);
@@ -691,7 +691,7 @@ icon {
 }
 
 .spot-details {
-  /*height: 580px;*/
+  height: 580px;
   margin: 120px auto 0 auto;
   text-align: center;
 }
