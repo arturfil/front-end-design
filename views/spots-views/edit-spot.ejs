@@ -1,5 +1,5 @@
 
-  <div class="sign-in spot-form">
+  <div class="sign-in spot-form edit-form">
     <h2 class="form-login"> Edit Spot </h2>
 
     <form class="form-login" action="/spots/<%= spotsInfo._id %>" method="post">
@@ -29,9 +29,10 @@
 
       <p>Displaying Image: </p>
       <img src="<%= spotsInfo.image %>" alt="">
+      <br>
       <label for="image-input">Image</label>
       <br>
-      <input id="image-input"type="img" name="imageValue">
+      <input id="image-input"type="img" name="imageValue" value="<%= spotsInfo.image %>">
       <br>
 
 
