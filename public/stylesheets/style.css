@@ -111,7 +111,7 @@ icon {
   background-repeat: no-repeat;
   background-position: 50% 50%;
   max-height: 800px;
-  background-size: cover;
+  background-size: 100% 100%;
   -moz-background-size:cover;
   -o-background-size:cover;
   -webkit-background-size:cover;
@@ -691,7 +691,7 @@ icon {
 }
 
 .spot-details {
-  height: 580px;
+  /*height: 580px;*/
   margin: 120px auto 0 auto;
   text-align: center;
 }
