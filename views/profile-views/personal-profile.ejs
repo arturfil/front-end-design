@@ -1,13 +1,52 @@
-<div class="container">
-  <img src="" alt="">
-  <p>Profile Pic</p>
-  <h2>Hi <%= profileInfo.name %></h2>
-  <br>
-  <p>Name: </p>
-  <p>Heigt: </p>
-  <p>Weight: </p>
-  <p>Activity: </p>
-  <p>Gender: </p>
-  <p>Age: </p>
-  <p>Goal: </p>
+<div class="container profile-page">
+  <div class="row ">
+    <div class=" calculations col-md-4">
+      <a href="#" class="btn btn-default spots-button-profile">Calculate Bmi</a>
+    </div>
+    <div class="calculations col-md-4">
+      <a href="#" class="btn btn-default spots-button-profile">Calculate Macros / Meal Plan</a>
+    </div>
+    <div class="calculations col-md-4">
+      <a href="#" class="btn btn-default spots-button-profile">Workout Plan</a>
+    </div>
+  </div>
+  <div class="row profile-container">
+    <div class="col-md-6">
+      <img src="<%=theUser.image%>" alt="">
+      <br>
+      <br>
+      <br>
+      <h3>Your Goal is to <%= theUser.goal %> </h3>
+      <br>
+      <h3> Your Basal metabolic rate is: </h3>
+    </div>
+    <h2><%= theUser.name %></h2>
+
+    <div class="col-md-3">
+
+      <p>Height: </p>
+      <br>
+      <p>Weight: </p>
+      <br>
+      <p>Activity Level: </p>
+      <br>
+      <p>Gender: </p>
+      <br>
+      <p>Age: </p>
+    </div>
+    <div class="col-md-3">
+      <p><%= theUser.height %></p>
+      <br>
+      <p><%= theUser.weight %></p>
+      <br>
+      <p><%= theUser.activity %></p>
+      <br>
+      <p><%= theUser.gender %></p>
+      <br>
+      <p><%= theUser.age %></p>
+    </div>
+  </div>
+  <div class="row">
+    <a class="col-md-12 col-sm-12 edit-profile-button btn btn-default" href="/profile/edit">Edit Profile</a>
+  </div>
 </div>

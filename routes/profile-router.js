@@ -5,7 +5,7 @@ const router       = express.Router();
 //custom middle ware in case we need it for views.
 // if user is logged in, show this... if not, don't let them see that...
 router.use((req, res, next) => {
-  if(req.user, next) => {
+  if(req.user) {
     res.locals.currentUser = req.user;
   } else {
     res.locals.currentUser = null;
@@ -21,16 +21,18 @@ router.get('/profile', (req, res, next) => {
     res.redirect('/');
     return;
   }
-    res.locals.theUser = req.user;
-    res.render('profile-views/personal-profile.ejs');
-});
-
-//if he clicks this route to edit his profile, render the form
-router.get('/profile/edit', (req, res, next) => {
-  req.user //---> we don't use findById because we are allready using a unique user's id
   res.locals.theUser = req.user;
-    //----> render form with allready submited form
-  )
+  res.render('profile-views/personal-profile.ejs');
+})
+
+// //if he clicks this route to edit his profile, render the form
+router.get('/profile/edit', (req, res, next) => {
+  res.locals.theUser = req.user;
+  if(!req.user){
+    res.redirect('/');
+    return;
+  }
+  res.render('profile-views/edit-profile.ejs');
 })
 
 // Once he submits the form, update the information and reirect to his personal profile
@@ -41,21 +43,23 @@ router.post('/profile', (req, res, next) => {
   //     next(err);
   //     return;
   //   }
-    req.user.name = //form value,
-    req.user.age: //form value,
-    req.user.weight: //form value,
-    req.user.height: //form value,
-    req.user.gender: //form value,
-    req.user.activityLevel: //form value,
+
+    req.user.name     = req.body.nameInput;
+    req.user.age      = req.body.ageInput;
+    req.user.weight   = req.body.weightInput;
+    req.user.height   = req.body.heightInput;
+    req.user.gender   = req.body.genderInput;
+    req.user.activity = req.body.activityInput;
+    req.user.image    = req.body.imageInput;
+    req.user.goal     = req.body.goalInput;
     req.user.save((err, next) => {
-      //check error
-      res.redirect('/profile') // following the default post route after editing... needs some corrections
-
+      if(err) {
+        next(err);
+        return;
+      }
+      // following the default post route after editing... needs some corrections
+      res.redirect('/profile')
     })
-  }
-
-
-  })
 });
 
 

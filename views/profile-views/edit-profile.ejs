@@ -1,0 +1,68 @@
+<div class="container edit-profile">
+  <div class="row">
+
+    <div class="col-md-6">
+      <form action="/profile" method="post">
+
+        <label for="name-input">Name</label>
+        <br>
+        <input id="name-input"type="text" name="nameInput" value="<%= theUser.name %>" placeholder="Full Name">
+        <br>
+
+        <label for="height-input">Height</label>
+        <br>
+        <input id="height-input"type="text" name="heightInput" value="<%= theUser.height %>" placeholder="Height">
+        <br>
+
+        <label for="weight-input">Weight</label>
+        <br>
+        <input id="weight-input"type="text" name="weightInput" value='<%= theUser.weight %>' placeholder="Weight">
+        <br>
+
+        <!-- Use Selector here -->
+        <label for="activity-input">Activity</label>
+        <br>
+        <select class="" name="activityInput">
+          <option value="High">High</option>
+          <option value="Medium">Medium</option>
+          <option value="Low">Low</option>
+        </select>
+        <br>
+
+        <label for="gender-input">Gender</label>
+        <br>
+        <select class="" name="genderInput">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+        <br>
+
+        <label for="age-input">Age</label>
+        <br>
+        <input id="age-input"type="text" name="ageInput" value="<%= theUser.age %>" placeholder="Age">
+        <br>
+
+        <label for="goal-input">Goal</label>
+        <br>
+        <select class="" name="goalInput">
+          <option value="increase mass">Increase Mass</option>
+          <option value="reduce weight">Reduce Weight</option>
+          <option value="mantain weight">Mantain Weight</option>
+        </select>
+        <br>
+
+        <label for="image-input"> Profile Image </label>
+        <br>
+        <input id="image-input"type="text" name="imageInput" value="<%= theUser.image %>" placeholder="Image file">
+        <br>
+        <br>
+        <button class="btn btn-default"> Save Changes </button>
+      </form>
+    </div>
+    <div class="col-md-6">
+      <img class="edit-profile-image" src="<%= theUser.image %>" alt="">
+    </div>
+
+
+  </div>
+</div>

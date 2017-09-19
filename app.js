@@ -64,6 +64,9 @@ app.use(myAuthRoutes);
 const mySpotRoutes = require('./routes/spots-router.js');
 app.use(mySpotRoutes);
 
+const myProfileRoutes = require('./routes/profile-router.js');
+app.use(myProfileRoutes);
+
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
   const err = new Error('Not Found');

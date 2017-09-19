@@ -614,6 +614,23 @@ icon {
   padding-top: 180px;
   padding-bottom: 180px;
 }
+.sign-in {
+  margin-top: -20px;
+  background-image: url("../images/board-walk.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-position: 50% 50%;
+  /*height: 750px;*/
+}
+.form-login select {
+  width: 400px;
+  height: 32px;
+  background-color: #fff;
+  border-radius: none;
+}
 .form-login input {
   width: 400px;
   height: 32px;
@@ -647,6 +664,9 @@ icon {
 .upper-element {
   margin-bottom: 15px;
 }
+
+/* All Spots */
+
 .list-of-posts {
   min-height: 560px;
   margin-bottom: 20px;
@@ -660,7 +680,23 @@ icon {
   list-style-type: none;
   /*min-height: 310px;
   max-height: 310px;*/
-
+}
+.spots-button-profile {
+  margin: 30px 5px 30px 0;
+  width: 370px;
+  background: transparent;
+  border-color: transparent;
+  padding: 10px 30px;
+  font-size: 19px;
+  text-transform: uppercase;
+  border-radius: 3px;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -o-transition: all 1s;
+}
+.spots-button-profile:hover {
+  background-color: #129CF3;
+  color: white;
 }
 .all-spots img {
   width: 370px;
@@ -668,23 +704,10 @@ icon {
   min-height: 370px;
   max-height: 370px;
 }
-.sign-in {
-  margin-top: -20px;
-  background-image: url("../images/board-walk.jpg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  -webkit-background-size: cover;
-  background-position: 50% 50%;
-  /*height: 750px;*/
-}
-.form-login select {
-  width: 400px;
-  height: 32px;
-  background-color: #fff;
-  border-radius: none;
-}
+
+/* Spots Details */
+
+
 .spot-details {
   height: 580px;
   margin: 120px auto 20px auto;
@@ -724,6 +747,57 @@ icon {
   color: white;
   border: transparent;
 }
+.all-spots-button-profile {
+  margin: 30px 10px 30px 10px;
+  width: 370px;
+  background: transparent;
+  border-color: transparent;
+  padding: 10px 30px;
+  font-size: 19px;
+  text-transform: uppercase;
+  border-radius: 3px;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -o-transition: all 1s;
+}
+.all-spots-button-profile:hover {
+  background-color: #129CF3;
+  color: white;
+}
+.edit-form img{
+  height: 300px;
+  width: 500px;
+}
+
+/*bootom*/
+
+/* profile view */
+.calculations p {
+  text-align: center;
+  margin: 0 20px;
+  width: 400px;
+}
+.profile-page{
+  margin: 150px auto;
+}
+.profile-container {
+  border: 1px gray solid;
+}
+.profile-page h3 {
+  text-align: center;
+  margin: 0 auto 40px auto;
+}
+.profile-page img {
+  margin: 50px 0 0 40px;
+  height: 300px;
+  width:400px;
+}
+.profile-page h2 {
+  margin: 50px 0 30px 30px;
+}
+.align-left {
+  text-align: right;
+}
 .spots-button {
   margin: 30px 10px 0 10px;
   width: 370px;
@@ -741,7 +815,34 @@ icon {
   background-color: #129CF3;
   color: white;
 }
-.edit-form img{
+.edit-profile-button {
+  margin: 30px auto 0 auto;
+  height: 32px;
+  background-color: #129CF3;
+  color: white;
+  border: transparent;
+}
+
+/* edit-profile form */
+
+.edit-profile {
+  margin: 120px auto;
+}
+.edit-profile select,
+.edit-profile input {
+  text-align: center;
+  margin-bottom: 10px;
+  width: 400px;
+  height: 40px
+}
+.edit-profile button {
+  width: 400px;
+  height: 32px;
+  background-color: #129CF3;
+  color: white;
+  border: transparent;
+}
+.edit-profile-image {
   height: 300px;
-  width: 500px;
+  width: 400px;
 }
