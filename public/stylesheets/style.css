@@ -611,9 +611,8 @@ icon {
 
 .form-login {
   text-align: center;
-}
-.form-login {
-  padding-top: 80px;
+  padding-top: 180px;
+  padding-bottom: 180px;
 }
 .form-login input {
   width: 400px;
@@ -645,27 +644,29 @@ icon {
   text-align: center;
   margin-top: 80px;
 }
+.upper-element {
+  margin-bottom: 15px;
+}
 .list-of-posts {
   min-height: 560px;
-  width: 1400px;
+  margin-bottom: 20px;
 }
 .all-spots {
-  background-color: #fafafa;
+  /*background-color: #fafafa;*/
   /*border-radius: 5px;*/
-  margin: 80px 4px 0 4px;
-  border: 1px solid #eee;
-  width: 24%;
+  /*margin: 20px 0 20px 0;*/
+  /*border: 1px solid #eee;*/
   text-align: center;
   list-style-type: none;
-  min-height: 410px;
-  max-height: 410px;
+  /*min-height: 310px;
+  max-height: 310px;*/
 
 }
 .all-spots img {
-  width: 100%;
-  padding: 20px 0;
-  min-height: 200px;
-  max-height: 200px;
+  width: 370px;
+  padding: 20px 0 0 0;
+  min-height: 370px;
+  max-height: 370px;
 }
 .sign-in {
   margin-top: -20px;
@@ -676,7 +677,7 @@ icon {
   -o-background-size: cover;
   -webkit-background-size: cover;
   background-position: 50% 50%;
-  min-height: 860px;
+  /*height: 750px;*/
 }
 .form-login select {
   width: 400px;
@@ -686,7 +687,7 @@ icon {
 }
 .spot-details {
   height: 580px;
-  margin: 120px auto 20px; auto;
+  margin: 120px auto 20px auto;
   text-align: center;
 }
 .spot-details img{
@@ -724,7 +725,8 @@ icon {
   border: transparent;
 }
 .spots-button {
-  margin-top: 30px;
+  margin: 30px 10px 0 10px;
+  width: 370px;
   background: transparent;
   border-color: #129CF3;
   padding: 10px 30px;

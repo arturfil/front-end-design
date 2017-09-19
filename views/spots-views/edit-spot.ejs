@@ -1,8 +1,10 @@
 
   <div class="sign-in spot-form edit-form">
-    <h2 class="form-login"> Edit Spot </h2>
 
     <form class="form-login" action="/spots/<%= spotsInfo._id %>" method="post">
+      <h2 class=""> Edit Spot </h2>
+      <br>
+      <br>
       <label for="name-input">Name</label>
       <br>
       <input id="name-input"type="text" name="nameValue" value="<%= spotsInfo.name %>">

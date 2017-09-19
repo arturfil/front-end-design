@@ -1,34 +1,49 @@
 <div class="text">
   <h2>Spots In Miami</h2>
   <br>
-  <a href="/spots/new" class="btn btn-default spots-button">Add a New Spot</a>
+  <div class="container upper-element">
+    <div class="row">
+      <a href="/spots/new" class="col-md-4 btn btn-default spots-button">Add a New Spot</a>
+      <p class="col-md-4 spots-button"> User Name </p>
+      <p class="col-md-4 spots-button"> Edit Profile </p>
+    </div>
+  </div>
 </div>
 
 
-<div class="container list-of-posts">
-  <div class="row">
+<div class="list-of-posts">
+
+  <div class="container">
+    <div class="row">
 
 
-      <ul>
-        <% listOfSpots.forEach((oneSpot) => { %>
-          <div class="all-spots col-md-3 col-sm-6">
-          <li>
-            <img src="<%= oneSpot.image %>" alt="">
-            <h3> <%= oneSpot.name %> </h3>
-            <p> Work Out Type:
-              <br>
-              <%= oneSpot.workout %> </p>
-            <p> <%= oneSpot.rating %> </p>
-            <p> <%= oneSpot.location %> </p>
-              <a class="edit-button btn btn-default"href="/spots/<%= oneSpot._id%>">More</a>
-            <!-- <a href="/spots/<%= oneSpot._id%>/edit">Edit</a> -->
-            <form class="delete-form" action="/spots/<%= oneSpot._id%>/delete" method="post">
-              <button class="btn btn-default delete-button"> Delete </button>
-            </form>
-          </li>
-          </div>
-      <% }) %>
-      </ul>
+        <ul>
+          <% listOfSpots.forEach((oneSpot) => { %>
+            <div class="all-spots col-md-4">
+            <li>
 
+
+              <a class="" href="/spots/<%= oneSpot._id%>">
+              <img src="<%= oneSpot.image %>" alt="">
+              <!-- <h3>
+               <%= oneSpot.name %>
+              </h3> -->
+              </a>
+              <!-- <p> Work Out Type:
+                <br>
+                <%= oneSpot.workout %> </p>
+              <p> <%= oneSpot.rating %> </p>
+              <p> <%= oneSpot.location %> </p>
+                <a class="edit-button btn btn-default"href="/spots/<%= oneSpot._id%>">More</a>
+              <form class="delete-form" action="/spots/<%= oneSpot._id%>/delete" method="post">
+                <button class="btn btn-default delete-button"> Delete </button>
+              </form> -->
+            </li>
+            </div>
+        <% }) %>
+        </ul>
+
+    </div>
   </div>
+
 </div>
