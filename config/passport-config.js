@@ -81,6 +81,8 @@ passport.use(
           }
 
           const theUser = new UserModel({
+            //test it
+            image: "https://graph.facebook.com/v2.10/" + profile.id + "/picture",
             facebookID: profile.id,
             email: profile.displayName
           });

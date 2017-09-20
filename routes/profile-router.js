@@ -52,6 +52,7 @@ router.post('/profile', (req, res, next) => {
     req.user.activity = req.body.activityInput;
     req.user.image    = req.body.imageInput;
     req.user.goal     = req.body.goalInput;
+    req.user.bmr      =  (66.5 + ( 13.75 * req.user.weight ) + ( 5.003 * req.user.height ) - ( 6.755 * req.user.age ));
     req.user.save((err, next) => {
       if(err) {
         next(err);
