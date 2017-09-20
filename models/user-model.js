@@ -18,7 +18,8 @@ const userSchema = new Schema(
     gender:            {type: String, enum: [ 'male', 'female']},
     age:               {type: Number},
     goal:              {type: String, enum: [ 'increase mass', 'reduce weight', 'mantain weight']},
-    image:             {type: String}
+    image:             {type: String},
+    bmr:               {type: String}
   },
   {
     timestamps: true
