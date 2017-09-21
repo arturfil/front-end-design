@@ -157,21 +157,14 @@
     width: 400px;
   }
   .spots-button {
-    margin: 30px 15% 15px 1%;
-    width: 333px;
+    margin: 30px 15% 15px 4%;
+    width: 380px;
   }
   .all-spots-button-profile {
-    margin: 30px 15% 15px 1%;
-    width: 333px;
+    margin: 30px 15% 15px 4%;
+    width: 380px;
   }
-  .spot-image {
-    opacity: .3;
-    min-width: 308px;
-    max-width: 308px;
-    min-height: 280px;
-    max-height: 280px;
-    margin-right: 150px;
-  }
+
   .spot-name {
     opacity: 1;
     width: 90%;
