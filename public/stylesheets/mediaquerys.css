@@ -152,20 +152,40 @@
     background-color: transparent;
     border-color: transparent;
   }
+  .spots-button-profile {
+    margin: 30px 5px 30px -5px;
+    width: 320px;
+  }
   .spots-button {
-    margin: 30px 15% 15px 7%;
+    margin: 30px 15% 15px 1%;
+    width: 333px;
   }
   .all-spots-button-profile {
-    margin: 30px 15% 15px 7%;
+    margin: 30px 15% 15px 1%;
+    width: 333px;
   }
   .spot-image {
     opacity: .3;
+    min-width: 308px;
+    max-width: 308px;
+    min-height: 280px;
+    max-height: 280px;
+    margin-right: 150px;
   }
   .spot-name {
     opacity: 1;
+    width: 90%;
+  }
+  .spot-name h2 {
+    margin-right: 40px;
   }
   .profile-page img {
-    margin: 0 8% 0 3.2%;
+    position: relative;
+    left: -14px;
+    margin: 0 auto;
+    height: 282px;
+    width: 337px;
+
   }
   .profile-page h2 {
     text-align: center;
@@ -176,6 +196,7 @@
   }
   .macros-stats-grams {
     text-align: center;
+    margin: 1px 1px 1px 1px;
   }
   .macros-stats h3 {
     text-align: center;
@@ -185,5 +206,8 @@
   }
   .macros-bmr-calories h3 {
     text-align: center;
+  }
+  .edit-profile {
+    width: 300px;
   }
 }
