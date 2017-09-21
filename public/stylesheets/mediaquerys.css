@@ -160,6 +160,9 @@
     margin: 30px 15% 15px 4%;
     width: 380px;
   }
+  .spot-image {
+    opacity: .3;
+  }
   .all-spots-button-profile {
     margin: 30px 15% 15px 4%;
     width: 380px;
@@ -174,7 +177,7 @@
   }
   .profile-page img {
     position: relative;
-    left: 33px;
+    left: 17px;
     margin: 0 auto;
     height: 282px;
     width: 337px;
