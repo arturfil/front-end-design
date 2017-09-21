@@ -19,7 +19,7 @@
     </div>
     <h2><%= theUser.name %></h2>
 
-    <div class="col-md-3">
+    <div class="profile-stats col-md-3 col-sm-12">
 
       <p>Height: </p>
       <br>
@@ -31,7 +31,7 @@
       <br>
       <p>Age: </p>
     </div>
-    <div class="col-md-3">
+    <div class="profile-stats col-md-3 col-sm-12">
       <p><%= theUser.height %></p>
       <br>
       <p><%= theUser.weight %></p>
@@ -73,33 +73,39 @@
   <%  if(theUser.goal === 'reduce weight') { %>
       <div class="col-md-6 macros-bmr-calories">
         <h3>You should be Eating 220 less calories compared to your BMR.</h3>
-        <h3> Your macros splits are: </h3>
-      </div>
-      <div class="col-md-3 macros-stats-grams">
-        <p> <%= Math.floor(theUser.weight * 1.5 * 2.2) %> grams of protein </p>
-        <p> 45 grams of fat </p>
-        <p>
-          <%= Math.floor(((theUser.bmr - (((theUser.weight * 1.5 * 2.2) * 4) + (45 * 9 ))) / 4 ) -55 )%> grams of carbohidrates
-        </p>
+        <div class="col-md-3 macros-stats-grams">
+          <h3> Your macros splits are: </h3>
+        </div>
+        <div class="col-md-3 macros-stats-grams">
+          <p> <%= Math.floor(theUser.weight * 1.5 * 2.2) %> grams of protein </p>
+          <p> 45 grams of fat </p>
+          <p>
+            <%= Math.floor(((theUser.bmr - (((theUser.weight * 1.5 * 2.2) * 4) + (45 * 9 ))) / 4 ) -55 )%> grams of carbohidrates
+          </p>
+        </div>
       </div>
   <%  } %>
   <%  if(theUser.goal === 'mantain weight') { %>
       <div class="col-md-6 macros-bmr-calories">
         <h3>You should consume the same calories as your BMR!.</h3>
-        <h3> Your macros splits are: </h3>
+        <div class="col-md-3 macros-stats-grams">
+          <h3> Your macros splits are: </h3>
+
+        </div>
+        <div class="col-md-3 macros-stats-grams">
+          <p> <%= Math.floor(theUser.weight * 1.5 * 2.2) %> grams of protein </p>
+          <p> 45 grams of fat </p>
+          <p>
+            <%= Math.floor((theUser.bmr - (((theUser.weight * 1.5 * 2.2) * 4) + (45 * 9 ))) / 4  )%> grams of carbohidrates
+          </p>
+        </div>
       </div>
-      <div class="col-md-3 macros-stats-grams">
-        <p> <%= Math.floor(theUser.weight * 1.5 * 2.2) %> grams of protein </p>
-        <p> 45 grams of fat </p>
-        <p>
-          <%= Math.floor((theUser.bmr - (((theUser.weight * 1.5 * 2.2) * 4) + (45 * 9 ))) / 4  )%> grams of carbohidrates
-        </p>
+
       </div>
   <%  } %>
 
-  </div>
   <div class="row ">
-    <div class="col-md-12">
+    <div class=" faq col-md-12">
       <p>
         If you have any questions on how this works or how is this calculated please go to the
         <a href="/#FEATURES"> FAQ</a>
@@ -107,4 +113,6 @@
 
     </div>
   </div>
+  </div>
+
 </div>

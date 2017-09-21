@@ -148,4 +148,42 @@
     width: 60%;
     margin-left: 20%
   }
+  .profile-page, .profile-container {
+    background-color: transparent;
+    border-color: transparent;
+  }
+  .spots-button {
+    margin: 30px 15% 15px 7%;
+  }
+  .all-spots-button-profile {
+    margin: 30px 15% 15px 7%;
+  }
+  .spot-image {
+    opacity: .3;
+  }
+  .spot-name {
+    opacity: 1;
+  }
+  .profile-page img {
+    margin: 0 8% 0 3.2%;
+  }
+  .profile-page h2 {
+    text-align: center;
+  }
+  .profile-stats {
+    width: 50%;
+    float: left;
+  }
+  .macros-stats-grams {
+    text-align: center;
+  }
+  .macros-stats h3 {
+    text-align: center;
+  }
+  .faq {
+    margin-top: 18px;
+  }
+  .macros-bmr-calories h3 {
+    text-align: center;
+  }
 }
