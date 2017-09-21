@@ -153,8 +153,8 @@
     border-color: transparent;
   }
   .spots-button-profile {
-    margin: 30px 5px 30px -5px;
-    width: 320px;
+    margin: 30px 5px 30px -11px;
+    width: 400px;
   }
   .spots-button {
     margin: 30px 15% 15px 1%;
@@ -181,7 +181,7 @@
   }
   .profile-page img {
     position: relative;
-    left: -14px;
+    left: 33px;
     margin: 0 auto;
     height: 282px;
     width: 337px;
@@ -209,5 +209,18 @@
   }
   .edit-profile {
     width: 300px;
+  }
+  .edit-profile input, .edit-profile label, .edit-profile select {
+    position: relative;
+    left: -65px;
+  }
+  .edit-profile img {
+    position: relative;
+    left: -65px;
+  }
+  .edit-profile button {
+    position: relative;
+    left: -65px;
+    margin-bottom: 15px;
   }
 }
