@@ -4,8 +4,9 @@
   <div class="container upper-element">
     <div class="row">
       <a href="/spots/new" class="col-md-4 btn btn-default spots-button">Add a New Spot</a>
+      
       <a href="/profile" class="col-md-4 btn btn-default all-spots-button-profile">Profile</a>
-      <a href="/profile" class="col-md-4 btn btn-default all-spots-button-profile">Get Your Macros</a>
+      <!-- <a href="/profile" class="col-md-4 btn btn-default all-spots-button-profile">Get Your Macros</a> -->
     </div>
   </div>
 </div>
@@ -19,27 +20,29 @@
 
         <ul>
           <% listOfSpots.forEach((oneSpot) => { %>
-            <div class="all-spots col-md-4">
-            <li>
 
+            <!-- This is one spot div  -->
 
-              <a class="" href="/spots/<%= oneSpot._id%>">
-              <img src="<%= oneSpot.image %>" alt="">
-              <!-- <h3>
-               <%= oneSpot.name %>
-              </h3> -->
-              </a>
+            <li class="all-spots-list">
+              <div class="all-spots col-md-4">
+                <a class="" href="/spots/<%= oneSpot._id%>">
+                    <h3 class="spot-name">
+                     <%= oneSpot.name %>
+                    </h3>
+                <img class="spot-image" src="<%= oneSpot.image %>" alt="">
+                </a>
+              </div>
               <!-- <p> Work Out Type:
                 <br>
                 <%= oneSpot.workout %> </p>
               <p> <%= oneSpot.rating %> </p>
               <p> <%= oneSpot.location %> </p>
-                <a class="edit-button btn btn-default"href="/spots/<%= oneSpot._id%>">More</a>
-              <form class="delete-form" action="/spots/<%= oneSpot._id%>/delete" method="post">
+                <a class="edit-button btn btn-default"href="/spots/<%= oneSpot._id%>">More</a>-->
+              <!-- <form class="delete-form" action="/spots/<%= oneSpot._id%>/delete" method="post">
                 <button class="btn btn-default delete-button"> Delete </button>
               </form> -->
             </li>
-            </div>
+
         <% }) %>
         </ul>
 
@@ -47,3 +50,56 @@
   </div>
 
 </div>
+
+<!-- <section class="available-on">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="available-title">
+          <h2>Available Now</h2>
+          <p>
+            These are some of the people I have work with. Shoot us a line to work with us!
+          </p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="row">
+
+          <a href="#">
+            <div class="col-md-4 no-padding">
+              <div class="available-on-item">
+                <i class="fa fa-apple"></i>
+                <div class="available-on-inner">
+                  <h2>iOS</h2>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <a href="#">
+            <div class="col-md-4 no-padding">
+              <div class="available-on-item">
+                <i class="fa fa-android"></i>
+                <div class="available-on-inner">
+                  <h2>ANDROID</h2>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <a href="#">
+            <div class="col-md-4 no-padding">
+              <div class="available-on-item">
+                <i class="fa fa-windows"></i>
+                <div class="available-on-inner">
+                  <h2>WINDOWS</h2>
+                </div>
+              </div>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->

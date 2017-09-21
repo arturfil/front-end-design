@@ -49,7 +49,7 @@ router.post('/process-signup', (req, res, next) => {
           return;
         }
         req.flash('signupSucces', 'Sign up Succesful!');
-        res.redirect('/');
+        res.redirect('/login');
       })
     }
   )

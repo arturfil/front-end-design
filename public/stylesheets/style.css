@@ -199,6 +199,8 @@ icon {
 }
 .about-iphone img {
   margin-top: 8px;
+  max-height: 470px;
+  max-width: 470px;
 }
 .choose-us-title {
   padding-bottom: 50px;
@@ -663,6 +665,7 @@ icon {
 }
 .upper-element {
   margin-bottom: 15px;
+  text-align: right;
 }
 
 /* All Spots */
@@ -671,16 +674,53 @@ icon {
   min-height: 560px;
   margin-bottom: 20px;
 }
+.all-spots-list {
+  list-style-type: none;
+}
 .all-spots {
-  /*background-color: #fafafa;*/
-  /*border-radius: 5px;*/
-  /*margin: 20px 0 20px 0;*/
-  /*border: 1px solid #eee;*/
   text-align: center;
   list-style-type: none;
-  /*min-height: 310px;
-  max-height: 310px;*/
+  transition: all 1s;
+  -moz-transition: all 1s;
+  -o-transition:L all 1s;
+  -webkit-transition: all 1s;
 }
+.all-spots:hover .spot-image {
+  opacity: .5;
+}
+.all-spots:hover .spot-name {
+  opacity: 1;
+}
+.spot-image {
+  transition: all 1s;
+  -moz-transition: all 1s;
+  -o-transition:L all 1s;
+  -webkit-transition: all 1s;
+}
+.spot-name-div {
+  opacity: .5;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transition: all 1s;
+  -moz-transition: all 1s;
+  -o-transition:L all 1s;
+  -webkit-transition: all 1s;
+}
+.spot-name {
+  position: absolute;
+  opacity: 0;
+  bottom: 93px;
+  width: 100%;
+  text-align: center;
+  color:black;
+  text-transform: uppercase;
+  transition: all 1s;
+  -moz-transition: all 1s;
+  -o-transition:L all 1s;
+  -webkit-transition: all 1s;
+}
+
 .spots-button-profile {
   margin: 30px 5px 30px 0;
   width: 370px;
@@ -739,7 +779,7 @@ icon {
   color: white;
   border: transparent;
 }
-.delete-button {
+#delete-button {
   margin-top: 2px;
   width: 50%;
   height: 32px;
@@ -778,10 +818,12 @@ icon {
   width: 400px;
 }
 .profile-page{
-  margin: 150px auto;
+  margin: 100px auto 35px auto;
 }
 .profile-container {
-  border: 1px gray solid;
+  border: 1px whitesmoke solid;
+  background-color: whitesmoke;
+  border-radius: 15px;
 }
 .profile-page h3 {
   text-align: center;
@@ -821,6 +863,25 @@ icon {
   background-color: #129CF3;
   color: white;
   border: transparent;
+}
+.stats h3 {
+  text-align: left;
+  margin-left: 20px;
+}
+.macros-bmr-calories {
+  text-align: left;
+  margin-top: 20px;
+}
+.macros-bmr-calories p {
+  margin-left: 20px;
+}
+.macros-stats {
+  width: auto;
+  text-align: left;
+}
+.macros-stats-grams {
+  width: auto;
+  text-align: left;
 }
 
 /* edit-profile form */
