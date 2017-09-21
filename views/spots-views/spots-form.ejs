@@ -1,12 +1,12 @@
 
   <div class="sign-in spot-form">
 
-    <form class="form-login" action="/spots" method="post">
+    <form class="form-login" action="/spots" method="post" enctype="multipart/form-data">
       <h2 class="form-login-header"> Enter a New Spot </h2>
 
       <label for="name-input">Name</label>
       <br>
-      <input id="name-input"type="text" name="nameValue" value="">
+      <input id="name-input"type="text" name="nameValue" value="" placeholder="Name of the place">
       <br>
 
       <label for="workout-input">Workout Type</label>
@@ -21,19 +21,28 @@
       <!-- add google maps auto complete -->
       <label for="location-input">Location</label>
       <br>
-      <input id="location-input"type="text" name="locationValue">
+      <input id="location-input"type="text" name="locationValue" placeholder="address
+      ">
       <br>
+
 
       <label for="rating-input">Rating</label>
       <br>
-      <input id="rating-input"type="type" name="ratingValue">
+      <input class="" id="rating-input"type="type" name="ratingValue" placeholder="/example/place.jpg">
       <br>
 
       <label for="image-input">Image</label>
       <br>
-      <input id="image-input"type="img" name="imageValue">
+      <input id="image-input"type="file" name="imageValue">
       <br>
 
+      <br>
+      <input id="lat-input" type="hidden" name="latitudValue">
+      <br>
+
+      <br>
+      <input id="long-input" type="hidden" name="longitudValue">
+      <br>
 
       <br>
       <button>Submit</button>
@@ -41,3 +50,9 @@
       <br>
     </form>
   </div>
+
+<!-- Google Auto Complete API -->
+
+
+    <input id="pac-input" class="controls" type="text" placeholder="Search Box">
+    <div id="map"></div>
