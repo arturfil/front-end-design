@@ -614,7 +614,7 @@ icon {
 .form-login {
   text-align: center;
   padding-top: 180px;
-  padding-bottom: 180px;
+  padding-bottom: 30px;
 }
 .sign-in {
   margin-top: -20px;
@@ -1067,4 +1067,29 @@ icon {
       }
       .map-canvas {
         margin-top: 50px;
+      }
+      .form-login-delete-button form {
+        text-align: center;
+      }
+      .form-login-delete-button button{
+        text-align: center;
+        margin: 0 auto 20px auto;
+        width: 400px;
+        height: 32px;
+        background-color: #129CF3;
+        color: white;
+        border: transparent;
+      }
+      #image-input{
+        margin: 4px auto;
+        width: 400px;
+        height: 32px;
+        background-color: #129CF3;
+        color: white;
+        border: transparent;
+        decoration: none;
+      }
+      .image-input {
+        color: white;
+        background-color: #129CF3;
       }

@@ -1,6 +1,11 @@
 const express   = require('express');
 const SpotModel = require('../models/spot-model.js');
 const router    = express.Router();
+const multer    = require('multer');
+
+const myUploader = multer(
+  {dest: __dirname + '/../public/images'}
+);
 
 // custom middleware for views => login / sign up and / logout
 router.use((req, res, next) => {
@@ -27,13 +32,14 @@ router.get('/spots/new', (req, res, next) => {
   res.render('spots-views/spots-form.ejs');
 });
 
-router.post('/spots', (req, res, next) => {
+router.post('/spots', myUploader.single('imageValue'), (req, res, next) => {
   const theSpot = new SpotModel({
-    name: req.body.nameValue,
-    workout: req.body.workoutValue,
-    location: req.body.locationValue,
-    image: req.body.imageValue
+    name:               req.body.nameValue,
+    workout:            req.body.workoutValue,
+    location:           req.body.locationValue,
+    image: '/images/' + req.file.filename
   })
+
   theSpot.save((err) => {
     if(err && theSpot.errors) {
       res.locals.errorMessages = theSpot.errors;
@@ -78,7 +84,7 @@ router.get('/spots/:spotsId/edit', (req, res, next) => {
   );
 });
 
-router.post('/spots/:spotsId', (req, res, next) => {
+router.post('/spots/:spotsId', myUploader.single('imageValue'), (req, res, next) => {
   SpotModel.findById(
     req.params.spotsId,
     (err, spotsFromDb) => {
@@ -90,7 +96,9 @@ router.post('/spots/:spotsId', (req, res, next) => {
       spotsFromDb.workout  = req.body.workoutValue;
       spotsFromDb.location = req.body.locationValue;
       spotsFromDb.rating   = req.body.ratingValue;
-      spotsFromDb.image    = req.body.imageValue;
+      if (req.file) {
+        spotsFromDb.image = '/images/' + req.file.filename;
+      }
       spotsFromDb.save((err) => {
         if(err) {
           next(err);

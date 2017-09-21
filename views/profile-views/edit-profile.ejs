@@ -2,7 +2,7 @@
   <div class="row">
 
     <div class="col-md-6">
-      <form action="/profile" method="post">
+      <form action="/profile" method="post" enctype="multipart/form-data">
 
         <label for="name-input">Name</label>
         <br>
@@ -53,7 +53,7 @@
 
         <label for="image-input"> Profile Image </label>
         <br>
-        <input id="image-input"type="text" name="imageInput" value="<%= theUser.image %>" placeholder="Image file">
+        <input id="image-input" type="file" name="imageValue" >
         <br>
         <br>
         <button class="btn btn-default"> Save Changes </button>

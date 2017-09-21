@@ -1,7 +1,7 @@
 
   <div class="sign-in spot-form edit-form">
 
-    <form class="form-login" action="/spots/<%= spotsInfo._id %>" method="post">
+    <form class="form-login" action="/spots/<%= spotsInfo._id %>" method="post" enctype="multipart/form-data">
       <h2 class=""> Edit Spot </h2>
       <br>
       <br>
@@ -34,17 +34,23 @@
       <br>
       <label for="image-input">Image</label>
       <br>
-      <input id="image-input"type="img" name="imageValue" value="<%= spotsInfo.image %>">
+      <div class="">
+        <input id="image-input"type="file" name="imageValue" value="<%= spotsInfo.image %>">
+      </div>
       <br>
 
 
       <br>
-      <button>Save Changes</button>
+      <button class="btn btn default">Save Changes</button>
       <br>
       <br>
-      <form id="delete-form" action="/spots/<%= spotsInfo._id%>/delete" method="post">
-        <button class="btn btn-default delete-button"> Delete </button>
-      </form> -->
+
     </form>
+    <div class="form-login-delete-button">
+      <form class="" id="delete-form" action="/spots/<%= spotsInfo._id%>/delete" method="post">
+        <button class="btn btn-default "> Delete </button>
+      </form>
+    </div>
+
 
   </div>
