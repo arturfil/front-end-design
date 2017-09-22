@@ -618,6 +618,7 @@ icon {
 }
 .sign-in {
   margin-top: -20px;
+  /*background-color: #AFDFF7;*/
   background-image: url("../images/board-walk.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;

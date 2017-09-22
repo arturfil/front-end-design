@@ -4,7 +4,7 @@ const router    = express.Router();
 const multer    = require('multer');
 
 const myUploader = multer(
-  {dest: __dirname + '/../public/images'}
+  {dest: __dirname + '/../public/uploads'}
 );
 
 // custom middleware for views => login / sign up and / logout
@@ -37,7 +37,7 @@ router.post('/spots', myUploader.single('imageValue'), (req, res, next) => {
     name:               req.body.nameValue,
     workout:            req.body.workoutValue,
     location:           req.body.locationValue,
-    image: '/images/' + req.file.filename
+    image: '/uploads/' + req.file.filename
   })
 
   theSpot.save((err) => {
@@ -97,7 +97,7 @@ router.post('/spots/:spotsId', myUploader.single('imageValue'), (req, res, next)
       spotsFromDb.location = req.body.locationValue;
       spotsFromDb.rating   = req.body.ratingValue;
       if (req.file) {
-        spotsFromDb.image = '/images/' + req.file.filename;
+        spotsFromDb.image = '/uploads/' + req.file.filename;
       }
       spotsFromDb.save((err) => {
         if(err) {

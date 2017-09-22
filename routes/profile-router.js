@@ -1,6 +1,11 @@
 const express      = require('express');
 const UserModel = require('../models/user-model.js');
 const router       = express.Router();
+const multer    = require('multer');
+
+const myUploader = multer(
+  {dest: __dirname + '/../public/uploads'}
+);
 
 //custom middle ware in case we need it for views.
 // if user is logged in, show this... if not, don't let them see that...
@@ -36,7 +41,7 @@ router.get('/profile/edit', (req, res, next) => {
 })
 
 // Once he submits the form, update the information and reirect to his personal profile
-router.post('/profile', (req, res, next) => {
+router.post('/profile', myUploader.single('imageValue'), (req, res, next) => {
   // req.userId //?
   // (err, userFromDb) => {
   //   if(err) {
@@ -53,14 +58,20 @@ router.post('/profile', (req, res, next) => {
     req.user.image    = req.body.imageInput;
     req.user.goal     = req.body.goalInput;
     req.user.bmr      =  (66.5 + ( 13.75 * req.user.weight ) + ( 5.003 * req.user.height ) - ( 6.755 * req.user.age ));
-    req.user.save((err, next) => {
+
+    if (req.file) {
+      req.user.image = '/uploads/' + req.file.filename;
+    }
+
+    req.user.save((err) => {
       if(err) {
         next(err);
         return;
       }
+
       // following the default post route after editing... needs some corrections
       res.redirect('/profile')
-    })
+    });
 });
 
 
